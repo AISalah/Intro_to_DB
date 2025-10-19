@@ -20,9 +20,8 @@ def create_database():
         if cursor.warning_count == 0:
             print("Database 'alx_book_store' created successfully!")
 
-
-    except:
-       mysql.connector.Error
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
 
     finally:
         if cursor:
