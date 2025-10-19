@@ -11,7 +11,7 @@ def create_database():
         connection = mysql.connector.connect(
             host="localhost",
             user="alx_book_store",
-            password="12345"
+            password=""
         )
 
         cursor = connection.cursor()
@@ -21,8 +21,8 @@ def create_database():
             print("Database 'alx_book_store' created successfully!")
 
 
-    except Error as err:
-        print(f"Error: {err}")
+    except:
+       mysql.connector.Error
 
     finally:
         if cursor:
